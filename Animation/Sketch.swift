@@ -42,7 +42,10 @@ class Sketch : NSObject {
         
         // Draw an ellipse in the middle of the canvas
         canvas.drawEllipse(at: Point(x: x, y: 250), width: 50, height: 50)
-        canvas.drawEllipse(at: Point(x: y, y: 250), width: 50, height: 50)
+        canvas.drawEllipse(at: Point(x: y, y: 125), width: 50, height: 50)
+        canvas.drawEllipse(at: Point(x: y, y: 375), width: 50, height: 50)
+        canvas.drawEllipse(at: Point(x: x, y: 470), width: 50, height: 50)
+        canvas.drawEllipse(at: Point(x: x, y: 30), width: 50, height: 50)
         
     }
     
