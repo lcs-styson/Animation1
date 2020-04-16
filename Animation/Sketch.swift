@@ -38,12 +38,27 @@ class Sketch : NSObject {
         
         
         // Change the fill colour
+        canvas.fillColor = Color.red
+        
+        // Draw an ellipse that goes to upper right corner
+        canvas.drawEllipse(at: Point(x: x, y: x), width: 50, height: 50)
+        
+        // Change the fill colour
+        canvas.fillColor = Color.green
+        
+        // Draw an ellipse that goes to upper left corner
+        canvas.drawEllipse(at: Point(x: y, y: x), width: 50, height: 50)
+        
+        // Change the fill color
+        canvas.fillColor = Color.yellow
+        
+        // Draw an ellipse that goes to lower left corner
+        canvas.drawEllipse(at: Point(x: y, y: y), width: 50, height: 50)
+        
+        // Change the fill color
         canvas.fillColor = Color.blue
         
-        // Draw an ellipse in the middle of the canvas
-        canvas.drawEllipse(at: Point(x: x, y: x), width: 50, height: 50)
-        canvas.drawEllipse(at: Point(x: y, y: x), width: 50, height: 50)
-        canvas.drawEllipse(at: Point(x: y, y: y), width: 50, height: 50)
+        // Draw an ellipse that goes to lower right corner
         canvas.drawEllipse(at: Point(x: x, y: y), width: 50, height: 50)
         
     }
