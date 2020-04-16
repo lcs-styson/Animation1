@@ -25,7 +25,8 @@ class Sketch : NSObject {
     func draw() {
         
         // Change fill to white
-        canvas.fillColor = Color(hue: 0, saturation: 0, brightness: 100, alpha: 10)
+        canvas.fillColor = Color(hue: 0, saturation: 0, brightness: 100, alpha: 0)
+        canvas.drawShapesWithBorders = false
         
         // Draw a square
         canvas.drawRectangle(at: Point(x: 0, y: 0), width: canvas.width, height: canvas.height)
@@ -34,7 +35,7 @@ class Sketch : NSObject {
         x += 1
         
         // Change the fill colour
-        canvas.fillColor = Color.blue
+        canvas.fillColor = Color.green
         
         // Draw an ellipse in the middle of the canvas
         canvas.drawEllipse(at: Point(x: x, y: 250), width: 50, height: 50)
