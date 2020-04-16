@@ -42,9 +42,29 @@ class Sketch : NSObject {
         
         // Draw an ellipse in the middle of the canvas
         canvas.drawEllipse(at: Point(x: x, y: 250), width: 50, height: 50)
+        
+        // Change the fill colour
+        canvas.fillColor = Color.blue
+        
+        // Draw an ellipse in the  lower middle of the canvas
         canvas.drawEllipse(at: Point(x: y, y: 125), width: 50, height: 50)
+        
+        // Change the fill colour
+        canvas.fillColor = Color.orange
+        
+        // Draw an ellipse in the  upper middle of the canvas
         canvas.drawEllipse(at: Point(x: y, y: 375), width: 50, height: 50)
+        
+        // Change the fill colour
+        canvas.fillColor = Color.purple
+        
+        // Draw an ellipse in the  top of the canvas
         canvas.drawEllipse(at: Point(x: x, y: 470), width: 50, height: 50)
+        
+        // Change the fill colour
+        canvas.fillColor = Color.black
+        
+        // Draw an ellipse in the bottom of the canvas
         canvas.drawEllipse(at: Point(x: x, y: 30), width: 50, height: 50)
         
     }
