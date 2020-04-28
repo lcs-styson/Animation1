@@ -9,6 +9,7 @@ class Sketch : NSObject {
     
     // Position of circle
     var x : Int
+    var deltaX : Int
     
     // This function runs once
     override init() {
@@ -19,6 +20,8 @@ class Sketch : NSObject {
         // Set starting position
         x = 250
         
+        // Set initial Speed
+        deltaX = 1
     }
     
     // This function runs repeatedly, forever, to create the animated effect
@@ -31,7 +34,13 @@ class Sketch : NSObject {
         canvas.drawRectangle(at: Point(x: 0, y: 0), width: canvas.width, height: canvas.height)
         
         // Change position
-        x += 1
+        x += deltaX
+        
+        // Detect right edge
+        if x == 500 || x == 0 {
+            deltaX *= -1
+        }
+        
         
         // Change the fill colour
         canvas.fillColor = Color.blue
