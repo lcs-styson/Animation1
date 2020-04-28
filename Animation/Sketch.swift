@@ -10,6 +10,8 @@ class Sketch : NSObject {
     // Position of circle
     var x : Int
     var deltaX : Int
+    var y : Int
+    var deltaY : Int
     
     // This function runs once
     override init() {
@@ -18,10 +20,12 @@ class Sketch : NSObject {
         canvas = Canvas(width: 500, height: 500)
         
         // Set starting position
-        x = 250
+        x = random(from: 0, to: 500)
+        y = random(from: 0, to: 500)
         
         // Set initial Speed
         deltaX = 1
+        deltaY = 1
     }
     
     // This function runs repeatedly, forever, to create the animated effect
@@ -35,18 +39,22 @@ class Sketch : NSObject {
         
         // Change position
         x += deltaX
+        y += deltaY
         
         // Detect right edge
         if x == 500 || x == 0 {
             deltaX *= -1
         }
-        
+        // Detect left edge
+        if y == 500 || y == 0 {
+            deltaY *= -1
+        }
         
         // Change the fill colour
-        canvas.fillColor = Color.blue
+        canvas.fillColor = Color.black
         
         // Draw an ellipse in the middle of the canvas
-        canvas.drawEllipse(at: Point(x: x, y: 250), width: 50, height: 50)
+        canvas.drawEllipse(at: Point(x: x, y: y), width: 50, height: 50)
         
     }
     
